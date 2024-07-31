@@ -16,14 +16,15 @@ content.appendChild(inputbox);
 content.appendChild(searchbutton);
 content.appendChild(detail);
 
-function Movie(name, img,actors, year, director, music) {
+class Movie{
+    constructor(name, img,actors, year, director, music) {
     this.moviename = name.toLowerCase();
     this.img=img;
     this.actorname = actors;
     this.year = year;
     this.directorname = director;
-    this.musicdirector = music;
-    this.displayitem = function () {
+    this.musicdirector = music; }
+    displayitem() {
         return `<br>Movie:  ${this.moviename}<br>
                 <img src="${this.img}" style="width:300px;height:200px">
         <br>Actor-Name:  ${this.actorname}<br>
